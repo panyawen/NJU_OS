@@ -4,8 +4,7 @@ In this experiment, we need to achieve similar features of "strace -c command".
 
 You can get source code in perf.c
 
-We fork a child process, and child process invokes execv("/usr/bin/strace", ....) to get the time used by every
-system call. 
+We fork a child process, and child process invokes execv("/usr/bin/strace", ....) to get the time used by every system call. 
 
 Then, child process sends the information of time to father process with pipe.
 
@@ -20,5 +19,4 @@ Be careful:
 
 	The program will find the executable file in current path first.
 	
-	If program can't find file in current path, it will then find file with environment variable
-	PATH.
+	If program can't find file in current path, it will then find file with environment variable PATH.
